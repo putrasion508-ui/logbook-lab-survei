@@ -8,12 +8,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --primary: #1A56A0;
-  --primary-dark: #154580;
-  --sidebar-w: 260px;
-  --bg: #f0f4f8;
-}
+:root { --primary: #1A56A0; --primary-dark: #154580; --sidebar-w: 260px; --bg: #f0f4f8; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1e293b; font-size: 0.875rem; overflow-x: hidden; }
 
@@ -24,87 +19,87 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1e293b; 
   align-items: center; justify-content: center; padding: 20px;
 }
 .login-card { background: #fff; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.18); width: 100%; max-width: 420px; overflow: hidden; }
-.login-top { background: var(--primary); padding: 32px 32px 24px; text-align: center; }
-.login-top img { width: 90px; height: 90px; object-fit: contain; background: #fff; border-radius: 16px; padding: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.25); margin-bottom: 14px; display: block; margin-left: auto; margin-right: auto; }
-.login-top h1 { font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px; }
-.login-top p { font-size: 14px; color: rgba(255,255,255,.95); line-height: 1.7; font-weight: 500; }
-.login-bot { padding: 28px 32px 32px; }
+.login-top { background: var(--primary); padding: 36px 32px 28px; text-align: center; }
+.login-logo {
+  width: 100px; height: 100px;
+  background: #fff; border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+.login-logo img { width: 90px; height: 90px; object-fit: contain; }
+.login-top h1 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.login-top p { font-size: 12.5px; color: rgba(255,255,255,.8); line-height: 1.65; }
+.login-bot { padding: 28px 32px 32px; background: #f8fafc; }
 .flabel { display: block; font-size: 12px; font-weight: 600; color: #475569; margin-bottom: 6px; }
-.finput { width: 100%; padding: 13px 14px; border: 1.5px solid #e2e8f0; border-radius: 10px; font-size: 15px; background: #f8fafc; outline: none; transition: all .2s; }
-.finput:focus { border-color: var(--primary); background: #fff; box-shadow: 0 0 0 3px rgba(26,86,160,.1); }
+.finput { width: 100%; padding: 13px 14px; border: 1.5px solid #e2e8f0; border-radius: 10px; font-size: 15px; background: #fff; outline: none; transition: all .2s; }
+.finput:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,86,160,.1); }
 .pass-wrap { position: relative; }
 .pass-wrap .finput { padding-right: 44px; }
 .eye-btn { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 16px; padding: 4px; }
-.btn-main { width: 100%; padding: 14px; background: var(--primary); color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all .2s; box-shadow: 0 4px 14px rgba(26,86,160,.35); }
+.btn-main { width: 100%; padding: 14px; background: var(--primary); color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all .2s; box-shadow: 0 4px 14px rgba(26,86,160,.3); margin-top: 4px; }
 .btn-main:hover { background: var(--primary-dark); transform: translateY(-1px); }
 .btn-main:active { transform: scale(.98); }
 .btn-main:disabled { background: #9ab5d8; box-shadow: none; cursor: not-allowed; transform: none; }
 .err-box { background: #fff0f0; border: 1.5px solid #fca5a5; border-radius: 10px; padding: 10px 14px; font-size: 13px; color: #dc2626; margin-bottom: 16px; display: none; }
 .ok-box { background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 10px; padding: 10px 14px; font-size: 13px; color: #15803d; margin-bottom: 16px; display: none; }
-.foot-note { text-align: center; font-size: 13px; color: #475569; margin-top: 18px; line-height: 1.7; }
-.foot-credit { text-align: center; font-size: 12px; color: #64748b; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f1f5f9; }
-.foot-credit strong { color: #334155; }
+.foot-note { text-align: center; font-size: 11px; color: #94a3b8; margin-top: 18px; line-height: 1.7; }
+.foot-credit { text-align: center; font-size: 11px; color: #cbd5e1; margin-top: 12px; padding-top: 12px; border-top: 1px solid #e2e8f0; }
+.foot-credit strong { color: #94a3b8; }
 .spin-sm { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; vertical-align: middle; margin-right: 6px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ── APP ── */
 #mainApp { display: none; min-height: 100vh; }
 
-/* SIDEBAR */
 .sidebar {
-  width: var(--sidebar-w); background: #fff;
-  border-right: 1px solid #e2e8f0;
-  position: fixed; left: 0; top: 0; height: 100vh;
-  z-index: 1000; display: flex; flex-direction: column;
-  overflow-y: auto; transition: transform .25s ease;
+  width: var(--sidebar-w); background: #fff; border-right: 1px solid #e2e8f0;
+  position: fixed; left: 0; top: 0; height: 100vh; z-index: 1000;
+  display: flex; flex-direction: column; overflow-y: auto;
+  transition: transform .25s ease;
 }
-.sidebar-head { background: var(--primary); padding: 18px 20px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-.sidebar-head img { width: 34px; height: 34px; object-fit: contain; background: #fff; border-radius: 8px; padding: 3px; flex-shrink: 0; }
+.sidebar-head { background: var(--primary); padding: 16px 18px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.sidebar-logo { width: 36px; height: 36px; background: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+.sidebar-logo img { width: 32px; height: 32px; object-fit: contain; }
 .sidebar-head span { font-size: 13px; font-weight: 700; color: #fff; line-height: 1.3; }
 .sidebar-nav { flex: 1; padding: 10px 0; }
-.nav-sec { font-size: 10px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: .06em; padding: 12px 20px 5px; }
-.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 20px; color: #64748b; text-decoration: none; border-left: 3px solid transparent; font-weight: 500; font-size: 13px; cursor: pointer; transition: all .15s; }
+.nav-sec { font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: .06em; padding: 12px 20px 5px; }
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 20px; color: #64748b; border-left: 3px solid transparent; font-weight: 500; font-size: 13px; cursor: pointer; transition: all .15s; }
 .nav-item:hover { background: #f8fafc; color: var(--primary); }
 .nav-item.active { border-left-color: var(--primary); background: #eff6ff; color: var(--primary); font-weight: 600; }
 .nav-item i { width: 18px; text-align: center; font-size: 14px; }
 .sidebar-foot { padding: 14px 20px; border-top: 1px solid #f1f5f9; flex-shrink: 0; }
-.sidebar-who { font-size: 12px; color: #334155; margin-bottom: 10px; }
-.sidebar-who strong { color: #0f172a; display: block; font-size: 13px; margin-top: 2px; }
+.sidebar-who { font-size: 11px; color: #64748b; margin-bottom: 10px; }
+.sidebar-who strong { color: #1e293b; display: block; font-size: 13px; margin-top: 2px; }
 .btn-logout { width: 100%; padding: 8px; background: #fff; border: 1.5px solid #fca5a5; color: #dc2626; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all .15s; }
 .btn-logout:hover { background: #fff0f0; }
 
-/* OVERLAY */
 .overlay { display: none; position: fixed; inset: 0; background: rgba(15,23,42,.45); z-index: 999; backdrop-filter: blur(2px); }
 .overlay.show { display: block; }
 
-/* MAIN CONTENT */
-.main-content { margin-left: var(--sidebar-w); display: flex; flex-direction: column; min-height: 100vh; transition: margin .25s ease; }
+.main-content { margin-left: var(--sidebar-w); display: flex; flex-direction: column; min-height: 100vh; transition: margin .25s; }
 .topbar { height: 56px; background: #fff; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; padding: 0 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,.05); gap: 12px; }
 .topbar-menu { background: none; border: none; color: #64748b; font-size: 18px; cursor: pointer; padding: 4px; flex-shrink: 0; display: none; }
-.topbar-title { font-size: 16px; font-weight: 700; color: #0f172a; flex: 1; }
+.topbar-title { font-size: 15px; font-weight: 600; color: #1e293b; flex: 1; }
 .topbar-timer { background: #eff6ff; color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; flex-shrink: 0; }
 .page-wrap { padding: 24px; flex: 1; }
 
-/* PAGES */
 .pg { display: none; }
 .pg.on { display: block; }
 .pg-head { margin-bottom: 20px; }
 .pg-head h4 { font-size: 18px; font-weight: 700; color: #0f172a; }
-.pg-head p { font-size: 14px; color: #334155; margin-top: 3px; }
+.pg-head p { font-size: 13px; color: #64748b; margin-top: 3px; }
 
 .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
 .info-tile { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; }
 .info-tile.full { grid-column: 1/-1; }
-.tile-lbl { font-size: 10px; color: #475569; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+.tile-lbl { font-size: 10px; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
 .tile-val { font-size: 16px; color: #1e293b; font-weight: 600; margin-top: 4px; }
-
 .box-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.05); margin-bottom: 16px; }
 .box-card-head { padding: 14px 18px; border-bottom: 1px solid #f1f5f9; font-size: 14px; font-weight: 600; color: #0f172a; }
 .box-card-body { padding: 20px; }
-
 .alert-warn { background: #fff8e6; border: 1px solid #fde68a; border-radius: 10px; padding: 12px 14px; font-size: 13px; color: #92400e; }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .sidebar { transform: translateX(-100%); }
   .sidebar.open { transform: translateX(0); }
@@ -113,21 +108,23 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1e293b; 
   .page-wrap { padding: 16px; }
   .info-grid { grid-template-columns: 1fr; gap: 10px; }
   #loginPage { background: var(--primary); align-items: flex-start; padding: 0; }
-  .login-card { border-radius: 0 0 20px 20px; max-width: 100%; margin: 0; }
-  .login-top { padding-top: 48px; }
-}
-@media (min-width: 769px) {
-  .info-grid { grid-template-columns: 1fr 1fr; }
+  .login-card { border-radius: 0; max-width: 100%; min-height: 100vh; }
+  .login-top { padding-top: 60px; }
+  .login-bot { min-height: calc(100vh - 300px); }
 }
 </style>
 </head>
 <body>
 
-<!-- LOGIN -->
+<!-- ══ LOGIN ══ -->
 <div id="loginPage">
   <div class="login-card">
     <div class="login-top">
-      <img src="https://drive.google.com/thumbnail?id=1F0Vog-Kl33DDTyNShogDubgYsXwHlod0&sz=w240" alt="Logo POLBAN">
+      <div class="login-logo">
+        <img src="https://polban.ac.id/wp-content/uploads/2021/02/Logo-Polban.png"
+             onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/id/thumb/e/e2/Logo_Polban.png/200px-Logo_Polban.png'"
+             alt="Logo POLBAN">
+      </div>
       <h1>Logbook</h1>
       <p>Laboratorium Survei dan Pemetaan Teknik Sipil<br>Politeknik Negeri Bandung</p>
     </div>
@@ -151,13 +148,17 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1e293b; 
   </div>
 </div>
 
-<!-- APP -->
+<!-- ══ APP ══ -->
 <div id="mainApp">
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-head">
-      <img src="https://drive.google.com/thumbnail?id=1F0Vog-Kl33DDTyNShogDubgYsXwHlod0&sz=w240" alt="Logo">
+      <div class="sidebar-logo">
+        <img src="https://polban.ac.id/wp-content/uploads/2021/02/Logo-Polban.png"
+             onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/id/thumb/e/e2/Logo_Polban.png/200px-Logo_Polban.png'"
+             alt="Logo">
+      </div>
       <span>Logbook Lab.<br>Survei POLBAN</span>
     </div>
     <nav class="sidebar-nav" id="sidebarNav"></nav>
@@ -167,7 +168,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1e293b; 
     </div>
   </aside>
 
-  <div class="main-content" id="mainContent">
+  <div class="main-content">
     <header class="topbar">
       <button class="topbar-menu" onclick="openSidebar()" type="button"><i class="fas fa-bars"></i></button>
       <span class="topbar-title" id="topbarTitle">Beranda</span>
@@ -175,12 +176,8 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1e293b; 
     </header>
     <div class="page-wrap">
 
-      <!-- Beranda -->
       <div class="pg on" id="pg-beranda">
-        <div class="pg-head">
-          <h4 id="greetName">Selamat datang!</h4>
-          <p>Ketuk ikon menu untuk navigasi.</p>
-        </div>
+        <div class="pg-head"><h4 id="greetName">Selamat datang!</h4><p>Ketuk ikon menu untuk navigasi.</p></div>
         <div class="info-grid">
           <div class="info-tile"><div class="tile-lbl">NIM / NIP</div><div class="tile-val" id="infoNim">-</div></div>
           <div class="info-tile"><div class="tile-lbl">Status</div><div class="tile-val" id="infoRole" style="color:#15803d">-</div></div>
@@ -189,25 +186,21 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1e293b; 
         <div class="alert-warn"><i class="fas fa-shield-alt me-2"></i><strong>Keamanan:</strong> Sesi berakhir otomatis setelah 10 menit tidak aktif.</div>
       </div>
 
-      <!-- Daftar Alat -->
       <div class="pg" id="pg-alat">
         <div class="pg-head"><h4>Daftar Alat Lab</h4><p>Inventaris alat laboratorium survei</p></div>
         <div class="box-card"><div class="box-card-body"><p class="text-muted">Fitur ini akan tersedia di Fase 2.</p></div></div>
       </div>
 
-      <!-- Peminjaman -->
       <div class="pg" id="pg-pinjam">
         <div class="pg-head"><h4>Form Peminjaman</h4><p>Ajukan peminjaman alat laboratorium</p></div>
         <div class="box-card"><div class="box-card-body"><p class="text-muted">Fitur ini akan tersedia di Fase 2.</p></div></div>
       </div>
 
-      <!-- Riwayat -->
       <div class="pg" id="pg-riwayat">
         <div class="pg-head"><h4>Riwayat Peminjaman</h4><p>Histori peminjaman alat kamu</p></div>
         <div class="box-card"><div class="box-card-body"><p class="text-muted">Fitur ini akan tersedia di Fase 2.</p></div></div>
       </div>
 
-      <!-- Profil -->
       <div class="pg" id="pg-profil">
         <div class="pg-head"><h4>Profil &amp; Keamanan</h4><p>Kelola akun kamu</p></div>
         <div class="box-card">
@@ -223,7 +216,6 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1e293b; 
         </div>
       </div>
 
-      <!-- Admin pages -->
       <div class="pg" id="pg-admin-pinjam">
         <div class="pg-head"><h4>Kelola Peminjaman</h4><p>Konfirmasi dan kelola peminjaman alat</p></div>
         <div class="box-card"><div class="box-card-body"><p class="text-muted">Fitur ini akan tersedia di Fase 3.</p></div></div>
@@ -276,8 +268,8 @@ var NAV_ADM = [
 var TITLES = {
   beranda:'Beranda', alat:'Daftar Alat', pinjam:'Form Peminjaman',
   riwayat:'Riwayat', profil:'Profil',
-  'admin-pinjam':'Kelola Peminjaman', 'admin-pelihara':'Pemeliharaan',
-  'admin-alat':'Database Alat', 'admin-user':'Kelola User'
+  'admin-pinjam':'Kelola Peminjaman','admin-pelihara':'Pemeliharaan',
+  'admin-alat':'Database Alat','admin-user':'Kelola User'
 };
 
 function api(action, params, cb) {
@@ -290,24 +282,7 @@ function api(action, params, cb) {
 }
 
 window.onload = function() {
-  // Cek token tersimpan
-  var saved = localStorage.getItem('lb_token');
-  if (saved) {
-    token = saved;
-    api('validateSession', {token: token}, function(res) {
-      if (res.valid) {
-        userInfo = {nim: res.nim, role: res.role};
-        // Perlu fetch info user lagi dari session
-        showApp();
-      } else {
-        localStorage.removeItem('lb_token');
-        token = '';
-        showLogin();
-      }
-    });
-  } else {
-    showLogin();
-  }
+  showLogin();
   document.getElementById('inpPass').addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
   document.getElementById('inpNim').addEventListener('keydown', function(e){ if(e.key==='Enter') document.getElementById('inpPass').focus(); });
   document.addEventListener('click', resetIdle);
@@ -329,7 +304,6 @@ function doLogin() {
     if (res.ok) {
       token = res.token;
       userInfo = {nim:res.nim, nama:res.nama, role:res.role, level:res.level};
-      localStorage.setItem('lb_token', token);
       showApp();
     } else {
       showErr(err, res.error||'Login gagal.');
@@ -341,10 +315,8 @@ function doLogin() {
 function doLogout() {
   api('logout', {token:token}, function(){});
   token = '';
-  localStorage.removeItem('lb_token');
   clearInterval(timerInterval); clearTimeout(idleTimeout);
-  closeSidebar();
-  showLogin();
+  closeSidebar(); showLogin();
 }
 
 function showLogin() {
@@ -390,7 +362,7 @@ function showPage(id) {
   if (nav) nav.classList.add('active');
   document.getElementById('topbarTitle').textContent = TITLES[id] || id;
   closeSidebar();
-  window.scrollTo(0, 0);
+  window.scrollTo(0,0);
 }
 
 function openSidebar() {
@@ -428,7 +400,7 @@ function doChangePassword() {
       document.getElementById('oldPass').value='';
       document.getElementById('newPass').value='';
       document.getElementById('confPass').value='';
-    } else showErr(err, res.error||'Gagal.');
+    } else showErr(err, res.error||'Gagal mengubah password.');
   });
 }
 
